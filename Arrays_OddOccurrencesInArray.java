@@ -36,6 +36,9 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * Score: 100%
+ */
 class Solution {
     public int solution(int[] A) {
         /*

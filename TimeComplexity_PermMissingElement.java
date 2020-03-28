@@ -25,6 +25,10 @@
  * the elements of A are all distinct;
  * each element of array A is an integer within the range [1..(N + 1)].
 */
+
+/*
+ * Score: 100%
+ */
 class Solution {
     public int solution(int[] A) {
         /*

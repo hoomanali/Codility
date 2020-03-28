@@ -51,6 +51,9 @@
 // System.out.println("this is a debug message");
 import java.util.Arrays;
 
+/*
+ * Score: 100%
+ */
 class Solution {
     public int[] solution(int[] A, int K) {
         /* 
