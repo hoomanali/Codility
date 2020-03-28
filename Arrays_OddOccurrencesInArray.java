@@ -38,18 +38,34 @@ import java.util.Map;
 
 class Solution {
     public int solution(int[] A) {
+        /*
+         * Use a HashMap to store the count of each value.
+         */
         Map<Integer, Integer> valueCount = new HashMap<>();
 
+        /*
+         * Iteratre through each number in the array.
+         * Store each number as the key and increment its count (value).
+         * If the number is not in the HashMap, add it with count 1.
+         */
         for(int number : A) {
             valueCount.put(number, valueCount.getOrDefault(number, 0) + 1);
         }
 
+        /*
+         * Iterate through the HashMap and check each key's value.
+         * If the key is odd, then it's the odd occurrence.
+         * Return the key.
+         */
         for(Map.Entry<Integer, Integer> entry : valueCount.entrySet()) {
             if(entry.getValue() % 2 != 0) {
                 return entry.getKey();
             }
         }
 
+        /*
+         * Program shouldn't reach this point. 
+         */
         return 0;
     }
 }
