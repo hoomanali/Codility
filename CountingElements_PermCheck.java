@@ -54,18 +54,36 @@ import java.util.HashSet;
 
 class Solution {
     public int solution(int[] A) {
+        /*
+         * Use a HashSet to track values since look up time is O(1) and
+         * duplicates will not be stored.
+         */
         Set<Integer> numbers = new HashSet<>();
 
+        /*
+         * Populate the HashSet with values from the input array.
+         */
         for(int number : A) {
             numbers.add(number);
         }
 
+        /*
+         * Iterate through the number of indexes and check if that
+         * index exists in the HashSet. If not, then the array is not
+         * a permutation.
+         */
         for(int index = 1; index <= A.length; index++) {
+            /*
+             * If index is not contained in the set, then it is not a perm.
+             */
             if(!numbers.contains(index)) {
                 return 0;
             }
         }
 
+        /*
+         * All indices found in HashSet, set is a permutation.
+         */
         return 1;
 
     }
